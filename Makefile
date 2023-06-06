@@ -18,6 +18,8 @@ SRCS	=	get_next_line/get_next_line.c\
 			ft_printf/ft_itoa.c\
 			ft_printf/ft_putstr_fd.c\
 			src/test.c\
+			src/test2.c\
+			src/test3.c\
 			src/parssing.c\
 			src/free.c\
 			main.c

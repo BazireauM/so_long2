@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:42:20 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 13:08:57 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:18:48 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "../get_next_line/get_next_line.h"
 # include "../ft_printf/ft_printf.h"
 
-typedef struct	s_map
+typedef struct s_map
 {
 	int		lenx;
 	int		leny;
@@ -30,6 +30,25 @@ typedef struct	s_map
 //	test.c
 
 int		test_name_file(char *s);
+int		test_map(struct s_map *map);
+int		rectangle(struct s_map *map);
+int		surrounded(struct s_map *map);
+
+//	test2.c
+
+int		test_char(struct s_map *map);
+int		test_char_p(struct s_map *map);
+int		test_char_e(struct s_map *map);
+int		test_char_c(struct s_map *map);
+int		count_e_and_c(char **map_cp);
+
+//	test3.c	(full)
+
+int		test_way(struct s_map *map);
+int		search_way(char **map_cp);
+int		test_new_case(char **map_cp, int i, int b);
+char	**cpy_map(struct s_map *map);
+char	**init_shearch_way(char **map_cp);
 
 //	parssing.c (full)
 

@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:48:28 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 13:09:09 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:45:50 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int argc, char *argv[])
 	}
 	map = malloc(sizeof(t_map) * 1);
 	map->map = parssing(argv[1]);
+	printf("%d\n", test_map(map));
 	display_map(map);
 	free_map(map->map);
 	free(map);

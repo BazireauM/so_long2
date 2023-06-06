@@ -6,13 +6,11 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 11:03:58 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 13:08:53 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:29:35 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
-void	test(char **final, char *tmp);
 
 char	**parssing(char *map)
 {
