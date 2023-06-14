@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:42:20 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/09 11:00:35 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/14 16:28:17 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <stdlib.h>
+# include "../minilibx/include/MLX42/MLX42.h"
 # include "../get_next_line/get_next_line.h"
 # include "../ft_printf/ft_printf.h"
 
