@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:42:20 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 14:18:48 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/09 11:00:35 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ int		len_char_char(char **final);
 
 void	free_map(char **map);
 void	free_struct_map(t_map *map);
+
+//	window.c
 
 #endif

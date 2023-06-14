@@ -28,19 +28,25 @@ OBJS	=	$(SRCS:.c=.o)
 
 CC		=	gcc
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -I include -I minilibx/include
+G_FLG	= minilibx/libmlx42.a -lglfw -L "/Users/$(shell echo $(USER))/.brew/opt/glfw/lib/"
 
 rm		=	rm -f
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJS)
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+$(NAME)	:	$(OBJS) minilibx/libmlx42.a
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(G_FLG)
+
+minilibx/libmlx42.a:
+	make -C minilibx
 
 clean	:
 			$(RM) $(OBJS)
+			make clean -C minilibx
 
 fclean	:	clean
 			$(RM) $(NAME)
+			make fclean -C minilibx
 
 re		:	fclean $(NAME)

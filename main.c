@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:48:28 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 14:45:50 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/14 14:59:02 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char *argv[])
 	free_map(map->map);
 	free(map);
 //	system("leaks so_long");
+//	mlx_ptr = mlx_init();
 	return (0);
 }
 
