@@ -6,12 +6,11 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 14:09:03 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/06 14:23:42 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:07:30 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
-
 
 int	test_way(struct s_map *map)
 {

@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 15:44:32 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/19 16:05:55 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/19 17:14:16 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,32 @@ t_img	*init_img(mlx_t *win)
 
 void	first_print(mlx_t *win, t_img *img, t_map *map)
 {
-	int x;
-	int y;
+	t_xy	*xy;
 
-	x = 0;
-	while (x < lenx)
+	xy = malloc(sizeof(t_xy) * 1);
+	xy->x = 0;
+	while (xy->x < map->lenx)
 	{
-		while (y < leny)
+		xy->y = 0;
+		while (xy->y < map->leny)
 		{
-			y++;
+			chose_and_print(map->map[xy->y][xy->x], img, win, xy);
+			xy->y += 1;
 		}
-		x++;
+		xy->x += 1;
 	}
+}
+
+void	chose_and_print(char c, t_img *img, mlx_t *win, t_xy *xy)
+{
+	if (c == '1')
+		mlx_image_to_window(win, img->wall, xy->x * 20, xy->y * 20);
+	else if (c == '0')
+		mlx_image_to_window(win, img->none, xy->x * 20, xy->y * 20);
+	else if (c == 'C')
+		mlx_image_to_window(win, img->item, xy->x * 20, xy->y * 20);
+	else if (c == 'E')
+		mlx_image_to_window(win, img->door, xy->x * 20, xy->y * 20);
+	else if (c == 'P')
+		mlx_image_to_window(win, img->fox, xy->x * 20, xy->y * 20);
 }

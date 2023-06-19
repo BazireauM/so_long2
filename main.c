@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:48:28 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/19 16:05:57 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/19 17:14:18 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ void	display_map(t_map *map);
 
 int	main(int argc, char *argv[])
 {
-	mlx_texture_t	*test;
 	mlx_t		*win;
 	t_map		*map;
-	mlx_image_t	*img;
+	t_img		*img;
 
 	if (argc != 2)
 		return (0);
@@ -34,11 +33,9 @@ int	main(int argc, char *argv[])
 	display_map(map);
 	printf("test : %d\n", map->lenx);
 	printf("test : %d\n", map->leny);
-	win = mlx_init(20 * map->lenx, 20 * map->leny, "so_long", 1);
-	img = mlx_new_image(win, 20, 20);
-	test = mlx_load_png("sprite/Wall.png");
-	img = mlx_texture_to_image(win, test);
-	mlx_image_to_window(win, img, 0, 0);
+	win = mlx_init(20 * map->lenx, 20 * map->leny, "so_long", 0);
+	img = init_img(win);
+	first_print(win, img, map);
 	mlx_loop(win);
 	free_map(map->map);
 	free(map);

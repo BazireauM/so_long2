@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:42:20 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/19 16:05:59 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/19 17:14:20 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ typedef	struct s_img
 	mlx_image_t		*item;
 	mlx_image_t		*none;
 }	t_img;
+
+typedef struct s_xy
+{
+	int	x;
+	int	y;
+}	t_xy;
 
 //	test.c
 
@@ -81,5 +87,7 @@ void	free_struct_map(t_map *map);
 //	init_img.c
 
 t_img	*init_img(mlx_t *win);
+void	first_print(mlx_t *win, t_img *img, t_map *map);
+void	chose_and_print(char c, t_img *img, mlx_t *win, t_xy *xy);
 
 #endif
