@@ -22,6 +22,7 @@ SRCS	=	get_next_line/get_next_line.c\
 			src/test3.c\
 			src/parssing.c\
 			src/free.c\
+			src/init_img.c\
 			main.c
 
 OBJS	=	$(SRCS:.c=.o)

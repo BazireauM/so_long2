@@ -6,7 +6,7 @@
 /*   By: mbazirea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:48:28 by mbazirea          #+#    #+#             */
-/*   Updated: 2023/06/14 16:28:15 by mbazirea         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:05:57 by mbazirea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ int	main(int argc, char *argv[])
 	map->map = parssing(argv[1]);
 	printf("%d\n", test_map(map));
 	display_map(map);
-	free_map(map->map);
-	free(map);
-//	system("leaks so_long");
 	printf("test : %d\n", map->lenx);
 	printf("test : %d\n", map->leny);
 	win = mlx_init(20 * map->lenx, 20 * map->leny, "so_long", 1);
@@ -43,6 +40,9 @@ int	main(int argc, char *argv[])
 	img = mlx_texture_to_image(win, test);
 	mlx_image_to_window(win, img, 0, 0);
 	mlx_loop(win);
+	free_map(map->map);
+	free(map);
+//	system("leaks so_long");
 	return (0);
 }
 
